@@ -19,7 +19,6 @@ function update(db, query, update, callback) {
 }
 
 function remove(db, query, callback) {
-  task.guid = uuid.v4();
   db.collection('todos').remove(query, true);
   return callback();
 }
